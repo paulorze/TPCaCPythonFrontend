@@ -1,0 +1,107 @@
+.about {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 4rem;
+}
+
+h2 {
+    font-size: var(--font-size-md);
+    font-style: italic;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.about h3 {
+    font-size: var(--font-size-md);
+    margin-bottom: 1rem;
+}
+
+.about p {
+    margin-bottom: 2rem;
+}
+
+.about__img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    margin: 1rem auto 3rem;
+}
+
+#img__1 {
+    background-image: url('../public/img/about1.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+#img__2 {
+    background-image: url('../public/img/about2.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+#img__3 {
+    background-image: url('../public/img/about3.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+#img__4 {
+    background-image: url('../public/img/about4.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+@media screen and (min-width: 768px) {
+    .about {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 2rem;
+        grid-template-areas:
+            "container__1 container__1 img__1"
+            "img__2 container__2 container__2"
+            "container__3 container__3 img__3"
+            "img__4 container__4 container__4"
+        ;
+    }
+
+    .about p,  .about__img {
+        margin: 0;
+    }
+
+    #container__1 {
+        grid-area: container__1;
+    }
+
+    #img__1{
+        grid-area: img__1;
+    }
+
+    #container__2 {
+        grid-area: container__2;
+    }
+
+    #img__2{
+        grid-area: img__2;
+    }
+
+    #container__3 {
+        grid-area: container__3;
+    }
+
+    #img__3{
+        grid-area: img__3;
+    }
+
+    #container__4 {
+        grid-area: container__4;
+    }
+
+    #img__4{
+        grid-area: img__4;
+    }
+}

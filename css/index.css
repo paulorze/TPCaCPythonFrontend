@@ -1,0 +1,75 @@
+a {
+    text-decoration: none;
+    color: var(--color-font);
+    cursor: pointer;
+}
+
+.index__container {
+    padding: 1rem;
+    border: 1px solid var(--color-font);
+    border-radius: 4px;
+    margin-bottom: 2rem;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    font-size: var(--font-size-md);
+    font-style: italic;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+h3 {
+    font-size: var(--font-size-md);
+    margin-bottom: 1rem;
+}
+
+.index ul {
+    list-style: disc;
+}
+
+.index ul li {
+    font-style: italic;
+}
+
+.index__container__img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin: 2rem auto 0;
+}
+
+#img__1 {
+    background-image: url('../public/img/about1.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+#img__2 {
+    background-image: url('../public/img/about2.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+#img__3 {
+    background-image: url('../public/img/about3.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+@media screen and (min-width: 768px) {
+    .index__container {
+        height: fit-content;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        justify-content: center;
+    }
+}

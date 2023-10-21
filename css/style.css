@@ -1,0 +1,385 @@
+/* Declaramos las variables que utilizaremos en nuestro proyecto */
+:root {
+    --font-main: 'Ubuntu', sans-serif;
+    --font-title: 'Gabarito', sans-serif;
+    --color-font: #000000;
+    --color-main: #FFD100;
+    --color-background: #D9D9D9;
+    --color-accent: #f5921d;
+    --font-size-sm: 1rem;
+    --font-size-md: 1.5rem;
+    --font-size-lg: 2rem;
+    --breakpoint-sm: 480px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 1200px;
+}
+
+/* Seteamos los estilos por defecto */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-main);
+}
+
+/* Aplicamos CSS a la clase que corresponde a los elementos dirigidos a los usuarios que requieren un lector de pantalla */
+.sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        padding: 0;
+        border: 0;
+        overflow: hidden;
+        clip: rect(0 0 0 0);
+        white-space: nowrap;
+}
+
+/* Aplicamos el CSS necesario para todos los elementos en comun en primer lugar */
+ul {
+    list-style: none;
+}
+
+li {
+    margin: 1rem;
+}
+
+.active {
+    font-weight: bold;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    width: 100vw;
+    z-index: 1;
+}
+
+.header__grid {
+    height: 100px;
+    background-color: var(--color-main);
+    border-bottom: 1px solid var(--color-font);
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-areas: 'hamburguesa logo telefono';
+    position: relative;
+    z-index: 2;
+}
+
+.header__ul {
+    display: none;
+}
+
+.header__izq {
+    height: 100px;
+    grid-area: hamburguesa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header__izq__btn {
+    background-color: transparent;
+    border: none;
+    border-radius: 4px;
+    padding: 0.15rem;
+}
+
+.header__logo {
+    min-height: 110px;
+    grid-area: logo;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+.header__logo a {
+    width: 150px;
+    max-width: 160px;
+    height: 100%;
+    filter: drop-shadow(0 0 5px #121212);
+    background-image: url(../public/img/Logo.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.header__der {
+    height: 100px;
+    grid-area: telefono;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header__der__btn {
+    padding: 0.25rem;
+    border-radius: 50%;
+}
+
+.hidden {
+    animation: fade-out 0.4s forwards;
+}
+
+.open {
+    animation: fade-in 0.4s forwards;
+}
+
+.header__menudesplegable {
+    background-color: var(--color-main);
+    padding: 0.1rem 1rem;
+    text-align: center;
+    z-index: 1;
+}
+
+.header__menudesplegable a, .header__ul a {
+    font-family: var(--font-title);
+    text-align: center;
+    font-size: var(--font-size-md);
+    text-decoration: none;
+    color: var(--color-font);
+}
+
+.header__menudesplegable ul {
+    width: 100%;
+}
+
+.header__menudesplegable ul li, .header__ul li {
+    border-bottom: 2px solid transparent;
+    transition: all 0.2s ease-in-out;
+}
+
+footer {
+    position: relative;
+    width: 100vw;
+    background-color: var(--color-main);
+    border-top: 1px solid var(--color-font);
+}
+
+footer a {
+    color: var(--color-font);
+    text-decoration: none;
+}
+
+.footer__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+        "menu redes"
+        "mapa mapa";
+    align-items: center;
+    justify-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+.footer__menu {
+    grid-area: menu;
+    align-self: flex-start;
+    padding: 1rem;
+    text-align: center;
+}
+
+.footer__menu ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer__menu ul li {
+    width: fit-content;
+    border-bottom: 2px solid transparent;
+}
+
+.footer__redes {
+    grid-area: redes;
+    align-self: flex-start;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer__redes ul{
+    margin-top: 1rem;
+    width: 80px;
+}
+
+.footer__redes ul li {
+    width: 55px;
+    height: 55px;
+    margin: 0;
+    padding: 0.15rem;
+    border-radius: 50%;
+}
+
+.footer__redes ul li:nth-child(odd) {
+    float: left;
+}
+
+.footer__redes ul li:nth-child(even) {
+    float: right;
+}
+
+.footer__mapa {
+    grid-area: mapa;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer__copyright {
+    position: absolute;
+    bottom: 2px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 1rem;
+}
+
+main {
+    background-color: var(--color-background);
+    padding: 2rem;
+    text-align: justify;
+    z-index: 0;
+}
+
+h1 {
+    font-family: var(--font-title);
+    margin-bottom: 4rem;
+}
+
+section {
+    font-size: 1.15rem;
+    text-indent: 1.15rem;
+}
+
+@media screen and (min-width: 768px) {
+    .header__der__btn:hover, .header__izq__btn:hover, .footer__redes ul li:hover { 
+        background-color: var(--color-accent);
+    }
+
+    .header__menudesplegable ul li:hover, .header__ul li:hover, .footer__menu ul li:hover {
+        border-bottom: 2px solid var(--color-accent);
+    }
+
+    .header__logo a {
+        transition: all 0.2s ease-in-out;
+    }
+
+    .header__logo a:hover {
+        height: 110%;
+        transform: translateY(5px);
+    }
+
+    .header__menudesplegable {
+        width: 100vw;
+        display: flex;
+    }
+
+    .header__menudesplegable ul {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .footer__grid {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: 
+            "menu redes mapa"
+    }
+
+    main {
+        padding: 6rem 4rem;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .header__grid {
+        grid-template-columns: 3fr 1fr 3fr;
+    }
+
+    .header__ul {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        text-align: center;
+    }
+
+    .header__izq__btn {
+        display: none;
+    }
+
+    .header__der__btn {
+        display: none;
+    }
+
+    .header__menudesplegable {
+        display: none;
+    }
+
+    .footer__redes {
+        width: 100%;
+    }
+
+    .footer__redes ul{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .footer__redes ul li {
+        margin: 1rem;
+        float: none;
+    }
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+        display: none;
+        position: absolute;
+        top: -100%;
+        right: 0;
+        left: 0;
+    }
+    100% {
+        opacity: 1;
+        display: flex;
+        top: 0;
+        right: 0;
+        left: 0;
+    }
+}
+
+
+@keyframes fade-out {
+    0% {
+        opacity: 1;
+        display: flex;
+        top: 0;
+        right: 0;
+        left: 0;
+    }
+    100% {
+        opacity: 0;
+        display: none;
+        position: absolute;
+        top: -100%;
+        right: 0;
+        left: 0;
+    }
+}

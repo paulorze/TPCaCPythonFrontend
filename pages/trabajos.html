@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Meta Tags -->
+    <title> Nuestros Trabajos | Dionel Ortiz — Soluciones de Construcción</title>
+    <meta name="title" content="Dionel Ortiz — Soluciones de Construcción" />
+    <meta name="description" content="Sitio Web de Dionel Ortiz, especialista en construcción. Contáctenos para obtener su presupuesto con el mejor precio del mercado y la mejor calidad en construcción." />
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../public/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../public/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../public/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../public/favicon/site.webmanifest">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400;700&family=Ubuntu:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/trabajos.css">
+</head>
+<body>
+    <header>
+        <div class="header__grid">
+            <div
+                class="header__izq"
+            >
+                <button
+                    class="header__izq__btn"
+                    id="header__izq__btn"
+                    aria-label="Toggle Menu"
+                >  
+                    <span
+                        class="sr-only"
+                    >
+                        Menú
+                    </span>
+                    <img src="../public/img/Icon_Hamburguesa.png" alt="Icono Hamburguesa" role="img" aria-hidden="true" title="Menú">
+                </button>
+                <ul class="header__ul">
+                    <li>
+                        <a href="../index.html" aria-label="Ir a Inicio">
+                            Inicio
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./about.html" aria-label="Ir a Sobre Mí">
+                            Sobre Mí
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div
+                class="header__logo"
+            >
+                <a 
+                    href="../index.html"
+                    aria-label="Ir al Inicio"
+                >
+                    <span
+                        class="sr-only"
+                    >
+                        Inicio
+                    </span>
+                </a>
+            </div>
+            <div
+                class="header__der"
+            >   
+                <div class="header__der__btn">
+                    <a href="whatsapp://send?phone=+1234567890">
+                        <span
+                            class="sr-only"
+                        >
+                            Whatsapp
+                        </span>
+                        <img src="../public/img/Icon_Telefono.png" alt="Icono teléfono" role="img" title="Comunicarse al WhatsApp">
+                    </a>
+                </div>
+                <ul class="header__ul">
+                    <li>
+                        <a href="./trabajos.html" aria-label="Ir a Nuestros Trabajos" class="active">
+                            Nuestros Trabajos
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./contacto.html" aria-label="Ir a Contacto">
+                            Contacto
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div
+            class="header__menudesplegable hidden"
+            id="header__menudesplegable"
+        >
+            <ul>
+                <li>
+                    <a href="../index.html" aria-label="Ir a Inicio">
+                        Inicio
+                    </a>
+                </li>
+                <li>
+                    <a href="./about.html" aria-label="Ir a Sobre Mí">
+                        Sobre Mí
+                    </a>
+                </li>
+                <li>
+                    <a href="./trabajos.html" aria-label="Ir a Nuestros Trabajos" class="active">
+                        Nuestros Trabajos
+                    </a>
+                </li>
+                <li>
+                    <a href="./contacto.html" aria-label="Ir a Contacto">
+                        Contacto
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <main>
+        <h1 class="title">
+            Nuestros Trabajos
+        </h1>
+        <section>
+            <div
+                class="trabajos__texto"
+            >
+                <p>
+                    A continuación, podrás ver una galeria de nuestros trabajos, así podrás comparar la calidad de los mismos con la oferta del mercado.
+                    En todos ellos ponemos toda nuestra pasión y sabiduría, para lograr resultados que destacan del resto y que responden a las necesidades estéticas y funcionales de
+                    nuestros clientes.
+                </p>
+            </div>
+            <div class="trabajos__container" id="trabajos__container">
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div
+            class="footer__grid"
+        >
+            <div
+                class="footer__menu"
+            >
+                <h4>
+                    Menú
+                </h4>
+                <ul>
+                    <li>
+                        <a href="../index.html" aria-label="Ir a Inicio">
+                            Inicio
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./about.html" aria-label="Ir a Sobre Mí">
+                            Sobre Mí
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./trabajos.html" aria-label="Ir a Nuestros Trabajos" class="active"> 
+                            Nuestros Trabajos
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./contacto.html" aria-label="Ir a Contacto">
+                            Contacto
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div
+                class="footer__redes"
+            >
+                <h4>
+                    Mis redes...
+                </h4>
+                <ul>
+                    <li>
+                        <a href="#" target="_blank">
+                            <span
+                                class="sr-only"
+                            >
+                                Instagram
+                            </span>
+                            <img src="../public/img/Icon_Instagram.png" alt="Icono Instagram" role="img" aria-hidden="true" title="Icono Instagram" loading="lazy">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank">
+                            <span
+                                class="sr-only"
+                            >
+                                Facebook
+                            </span>
+                            <img src="../public/img/Icon_Facebook.png" alt="Icono Facebook" role="img" aria-hidden="true" title="Icono Facebook" loading="lazy">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank">
+                            <span
+                                class="sr-only"
+                            >
+                                Correo Electrónico
+                            </span>
+                            <img src="../public/img/Icon_Email.png" alt="Icono Correo Electrónico" role="img" aria-hidden="true" title="Icono Correo Electrónico" loading="lazy">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div
+                class="footer__mapa"
+            >
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d18577.76709670717!2d-58.45073112137315!3d-34.60122121159482!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca688994eb61%3A0xd055df0a7dafa86e!2sParque%20Centenario!5e0!3m2!1ses!2sar!4v1697657762262!5m2!1ses!2sar" width="200" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+        <div
+            class="footer__copyright"
+        >
+            © Grupo 20, 2023 
+        </div>
+    </footer>
+    <script src="../js/main.js"></script>
+    <script src="../js/trabajos.js"></script>
+</body>
+</html>
